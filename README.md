@@ -21,6 +21,7 @@ A Ruby on Rails application that assigns Secret Santa gift-givers while avoiding
 ### 1. Clone the Repo
 
 git clone https://github.com/koushikapriyanka/secret_santa_app.git
+
 cd secret_santa_app
 
 ### 2. Install Dependencies
@@ -34,23 +35,31 @@ employees.csv: current year participants
 
 last_year.csv: previous year assignments
 
-Example employees.csv:
+### Example employees.csv:
+
 Employee_Name,Employee_EmailID
+
 Alice Smith,alice@example.com
+
 Bob Jones,bob@example.com
 
-Example last_year.csv:
+
+### Example last_year.csv:
+
 Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID
+
 Alice Smith,alice@example.com,Bob Jones,bob@example.com
 
 
 ### 4. Run the Assignment
 bundle exec rake secret_santa:run
+
 The output CSV will be written to: data/output_assignments.csv
 
 ### 5. Running Tests
 
 bundle exec rspec
+
 All logic is unit tested with RSpec and located in the /spec folder.
 
 
